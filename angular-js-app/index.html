@@ -6,11 +6,469 @@
   <link rel="stylesheet" media="all" href="css/custom.css">
 </head>
 <body>
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="">AWJ Base Project</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#person">Person</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#animal">Animal</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <hr/>
 
   <div class="container">
     <div ng-controller="HomeController">
-      <h1>{{ helloWorld }}</h1>
+        <div class="col-md-2-1">
+        <img src="http://www.dublin.ie/comhairle/wp-content/uploads/2013/03/wses153201.jpg" class="img-thumbnail-1"/>
+       </div>
+      <p>Writing this live into the browser...</p>
+       
     </div>
+  </div>
+
+  <hr/>
+
+  <!-- /resources1 -->
+  <div class="container">
+    <h1 id="person">Person</h1>
+    <h2>List all persons</h2>
+    <table class="table table-bordered">
+      <tr> 
+        <th>ID</th>
+        <th>Name</th>
+        <th style="width:250px;">Options</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Paul</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Paul</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+   
+    </table>
+
+    <div class="row">
+      <div class="col-md-3">
+        <h2>Edit a person</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">ID</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="ID">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Name</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Name">
+          </div>
+          
+          <button type="submit" class="btn btn-info">Save</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Add a person</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">ID</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="ID">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Name</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Name">
+          </div>
+         
+          <button type="submit" class="btn btn-success">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Show a person</h2>
+      </div>
+      <div class="col-md-2">
+        <img src="https://collaborativeman.files.wordpress.com/2010/05/clipart_of_16510_sm_61cc7e20.jpg" class="img-thumbnail"/>
+      </div>
+    </div>
+  </div>
+ 
+  <hr/>
+
+  <!-- /resources2-->
+  <div class="container">
+    <h1 id="product">Product</h1>
+    <h2>List all products</h2>
+    <table class="table table-bordered">
+      <tr> 
+        <th>Code</th>
+        <th>Quantity</th>
+        <th>Name</th>
+        
+        <th style="width:220px;">Options</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>12</td>
+        <td>milk</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>23</td>
+        <td>water</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>44</td>
+        <td>chocolate</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+     
+    </table>
+
+    <div class="row">
+      <div class="col-md-3">
+        <h2>Edit a product</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">Code</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="Code">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Quantity</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Quantity">
+          </div>
+           <div class="form-group">
+            <label for="attribute2">Name</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Name">
+          </div>
+          <button type="submit" class="btn btn-info">Save</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Add a product</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">Code</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="Code">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Quantity</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Quantity">
+          </div>
+           <div class="form-group">
+            <label for="attribute2">Name</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Name">
+          </div>
+          <button type="submit" class="btn btn-success">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Show a product</h2>
+      </div>
+      <div class="col-md-2">
+        <img src="http://vteki.com/wp-content/uploads/2013/03/New-Apple-Products-in-2013.jpg" class="img-thumbnail"/>
+      </div>
+    
+    </div>
+  </div>
+
+  <hr/>
+
+     
+<!-- /resources3-->
+  <div class="container">
+    <h1 id="animal">Animal</h1>
+    <h2>List all animals</h2>
+    <table class="table table-bordered">
+      <tr> 
+      <th>Number</th> 
+      <th>Age</th>
+      <th>Name</th>
+      <th style="width:240px;">Options</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>12</td>
+        <td>Giraffe</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>13</td>
+        <td>Elephant</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>11</td>
+        <td>Tiger</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      
+    </table>
+
+    <div class="row">
+      <div class="col-md-3">
+        <h2>Edit an animal</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">Number</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="Number">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Age</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Name</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Name">
+          </div>
+          <button type="submit" class="btn btn-info">Save</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-3 col-md-offset-6">
+        <h2>Add an animal</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">Number</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="Number">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Age</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Age">
+          </div>
+           <div class="form-group">
+            <label for="attribute2">Name</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Name">
+          </div>
+          <button type="submit" class="btn btn-success">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Show an animal</h2>
+      </div>
+      <div class="col-md-2">
+        <img src="http://images2.fanpop.com/images/photos/2600000/White-Tigers-wild-animals-2688151-1024-768.jpg" class="img-thumbnail"/>
+      </div>
+     
+    </div>
+  </div>
+  <hr/>
+
+  <div class="container">
+    <footer class="footer">
+      <p class="text-muted pull-left">AWJ Base Project &copy; 2015-2016</p>
+      <p class="text-muted pull-right">Moise Elena Madalina, 333AA</p>
+    </footer>
   </div>
 
   <script src="js/jquery-1.11.3.min.js"></script>

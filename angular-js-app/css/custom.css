@@ -1,5 +1,6 @@
 body {
   margin-top:20px;
+  margin-bottom:200px;
 }
 
 .label {
@@ -19,3 +20,34 @@ body {
   border-color:#78fa89;
 }
 
+a:hover, a:focus {
+  text-decoration:none;
+}
+
+table{
+	border-collapse: collapse;
+	text-align: center;
+}
+th{
+	text-align: center;
+}
+#person{
+	font-family: verdana;
+	width: 10px;
+	height: 100px;
+	color: black;
+}
+.img-thumbnail{
+	height: 500px;
+	width: 600px;
+}
+div.col-md-2{
+	width: 1000px;
+}
+.img-thumbnail-1{
+	height: 200px;
+	width: 200px;
+}
+div.col-md-2-1{
+	width: 1000px;
+}
