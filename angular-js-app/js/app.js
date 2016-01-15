@@ -21,76 +21,7 @@ app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     $scope.editProduct = {};
     $scope.editPerson = {};
 
- /*   $http.get(url).then(function successCallback(response) {
-
-        $scope.persoane = response.data;
-        $scope.fields = Object.keys(response.data[0]);
-
-        console.log($scope.persoane);
-        //console.log($scope.fields);
-
-    });
-    
-
-    $scope.addPerson = function(persoana) {
-		debugger;
-        persoana.id = parseInt(persoana.id);
-        console.log(persoana.id);
-        $http({
-            method: 'POST',
-            url: url,
-            data: persoana
-        }).then(function successCallback(response) {
-			debugger;
-            console.log(response);
-            $scope.persoane.push(persoana);
-            // done.
-        }, function errorCallback(response) {
-			debugger;
-            console.log(response);
-        });
-    };
-
-
-    $scope.deletePersoana = function(id) {
-        $http({
-            method: 'DELETE',
-            url: url+'/' + id,
-            data: {}
-        }).then(function successCallback(response) {
-            // aici nu intra niciodata ca e functia de succes
-        }, function errorCallback(response) {
-            // aici intra pentru ca da eroare
-            $scope.persoane = $scope.persoane.filter(function(obj) {
-                return obj.id !== id;
-            });
-        });
-    };
-
-
-
-    $scope.setUpdatePerson = function(person) {
-        $scope.editPerson = person;
-    };
-
-
-    $scope.updatePerson = function() {
-        $http({
-            method: 'PUT',
-            url: url,
-            data: $scope.editPerson
-        }).then(function successCallback(response) {
-            $scope.editPerson = {};
-            console.log(response);
-            // $scope.persoane.push($scope.editPerson);
-            // done.
-        }, function errorCallback(response) {
-            $scope.editPerson = {};
-            console.log(response);
-        });
-    };
-
-}]);*/
+ 
 
  //get persoana
     $http.get('http://localhost:8080/person').then(
