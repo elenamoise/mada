@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -32,10 +33,10 @@ public class AnimalController {
     return this.animals;
   }
 
-  @RequestMapping(value="/animal/{number}", method = RequestMethod.GET)
-  public ResponseEntity show(@PathVariable("number") int number) {
+  @RequestMapping(value="/animal/{id}", method = RequestMethod.GET)
+  public ResponseEntity show(@PathVariable("id") int id) {
     for(Animal p : this.animals) {
-      if(p.getNumber() == number) {
+      if(p.getId() == id) {
         return new ResponseEntity<Animal>(p, new HttpHeaders(), HttpStatus.OK);
       }
     }
@@ -56,10 +57,10 @@ Animal p = new Animal(10,12,"Lion");
   }
 
 
-  @RequestMapping(value="/animal/{number}", method = RequestMethod.PUT)
-  public ResponseEntity update(@PathVariable("number") int number) {
+  @RequestMapping(value="/animal/{id}", method = RequestMethod.PUT)
+  public ResponseEntity update(@PathVariable("id") int id) {
     for(Animal p : this.animals) { 
-      if(p.getNumber() == number) { p.setName("Zebra");
+      if(p.getId() == id) { p.setName("Zebra");
         return new ResponseEntity<Animal>(p, new HttpHeaders(), HttpStatus.OK);
       }
     }
@@ -68,10 +69,10 @@ Animal p = new Animal(10,12,"Lion");
 
 
 
-  @RequestMapping(value="/animal/{number}", method = RequestMethod.DELETE)
-  public ResponseEntity remove(@PathVariable("number") int number) {
+  @RequestMapping(value="/animal/{id}", method = RequestMethod.DELETE)
+  public ResponseEntity remove(@PathVariable("id") int id) {
     for(Animal p : this.animals) {
-      if(p.getNumber() == number) {
+      if(p.getId() == id) {
         this.animals.remove(p);
         return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NO_CONTENT);
       }

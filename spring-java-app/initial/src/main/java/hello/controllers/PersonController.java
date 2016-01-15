@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -45,12 +46,11 @@ public class PersonController {
 
 
 
-@RequestMapping(value="/person/", method = RequestMethod.POST)
-  public ResponseEntity create() {
+@RequestMapping(value="/person", method = RequestMethod.POST)
+  public ResponseEntity create(@RequestBody Person p) {
 
-Person p = new Person(10,"John");
   this.persons.add(p);
-        return new ResponseEntity<Person>(p, new HttpHeaders(), HttpStatus.OK);
+        return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.OK);
     
 
   }

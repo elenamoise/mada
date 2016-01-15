@@ -5,20 +5,20 @@ import java.util.ArrayList;
 
 public class Product {
 	private String name;
-	private int code;
+	private int id;
 	private int quantity;
 
 	public Product(){}
 
-	public Product(int code,int quantity,String name){
-		this.code=code;
+	public Product(int id,int quantity,String name){
+		this.id=id;
 		this.quantity=quantity;
 		this.name=name;
 	}
 
 	
-	public int getCode(){
-		return this.code;
+	public int getId(){
+		return this.id;
 	}
 
 	public int getQuantity(){

@@ -6,14 +6,14 @@ import java.util.ArrayList;
 public class Animal {
   private String name;
   private int age;
-  private int number;
+  private int id;
 
   public Animal() {}
 
-  public Animal(int number,int age, String name) {
+  public Animal(int id,int age, String name) {
       this.name = name;
       this.age = age;
-      this.number=number;
+      this.id=id;
   }
 
   public String getName() {
@@ -24,8 +24,8 @@ public class Animal {
     return this.age;
   }
 
-  public  int getNumber(){
-    return this.number;
+  public  int getId(){
+    return this.id;
   }
 
 public void setName(String Name) {

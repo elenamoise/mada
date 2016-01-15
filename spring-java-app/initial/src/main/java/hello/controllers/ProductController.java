@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -31,11 +32,11 @@ public class ProductController {
     return this.products;
   }
 
-  @RequestMapping(value="/product/{code}", method = RequestMethod.GET)
-  public ResponseEntity show(@PathVariable("code") int code) {
+  @RequestMapping(value="/product/{id}", method = RequestMethod.GET)
+  public ResponseEntity show(@PathVariable("id") int id) {
 
     for(Product p : this.products) {
-      if(p.getCode() == code) {
+      if(p.getId() == id) {
         return new ResponseEntity<Product>(p, new HttpHeaders(), HttpStatus.OK);
       }
     }
@@ -55,10 +56,10 @@ Product p = new Product(8,12,"Bread");
 
 
 
-  @RequestMapping(value="/product/{code}", method = RequestMethod.PUT)
-  public ResponseEntity update(@PathVariable("code") int code) {
+  @RequestMapping(value="/product/{id}", method = RequestMethod.PUT)
+  public ResponseEntity update(@PathVariable("id") int id) {
     for(Product p : this.products) { 
-      if(p.getCode() == code) { p.setName("VelPitar");
+      if(p.getId() == id) { p.setName("VelPitar");
         return new ResponseEntity<Product>(p, new HttpHeaders(), HttpStatus.OK);
       }
     }
@@ -67,10 +68,10 @@ Product p = new Product(8,12,"Bread");
 
 
 
-  @RequestMapping(value="/product/{code}", method = RequestMethod.DELETE)
-  public ResponseEntity remove(@PathVariable("code") int code) {
+  @RequestMapping(value="/product/{id}", method = RequestMethod.DELETE)
+  public ResponseEntity remove(@PathVariable("id") int id) {
     for(Product p : this.products) {
-      if(p.getCode() == code) {
+      if(p.getId() == id) {
         this.products.remove(p);
         return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NO_CONTENT);
       }
